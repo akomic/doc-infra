@@ -1,1 +1,2 @@
-domain="doc-dev.tti.zone"
+environment = "dev"
+domain      = "doc-dev.tti.zone"
