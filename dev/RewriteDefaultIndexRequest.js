@@ -16,7 +16,7 @@ function handler(event) {
             return response;
         }
     } 
-    else if (!uri.includes('.')) {
+    else if (!uri.includes('.') && !uri.startsWith("/docs") ) {
         request.uri += '/index.html';
     }
 
