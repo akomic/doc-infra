@@ -15,6 +15,11 @@ module "cdn" {
 
   acm_certificate_arn = data.terraform_remote_state.env.outputs.cert_arn
 
+  function_association = [{
+      event_type   = "viewer-request"
+      function_arn = data.terraform_remote_state.env.outputs.RewriteDefaultIndexRequestArn
+  }]
+
   deployment_principal_arns = {
     "${data.terraform_remote_state.env.outputs.iam_user_arn}" = [""]
   }

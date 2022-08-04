@@ -22,3 +22,7 @@ output "iam_user_secret" {
   value     = aws_iam_access_key.deployer.secret
   sensitive = true
 }
+
+output "RewriteDefaultIndexRequestArn" {
+  value = aws_cloudfront_function.RewriteDefaultIndexRequest.arn
+}
